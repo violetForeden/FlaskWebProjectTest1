@@ -19,6 +19,7 @@
     <RootNamespace>FlaskWebProjectTest1</RootNamespace>
     <InterpreterId>CondaEnv|CondaEnv|env</InterpreterId>
     <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
+    <WebBrowserPort>5000</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,6 +30,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FlaskWebProjectTest1\auth.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskWebProjectTest1\blog.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FlaskWebProjectTest1\db.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="FlaskWebProjectTest1\__init__.py" />
     <Compile Include="FlaskWebProjectTest1\views.py" />
@@ -40,8 +50,20 @@
     <Folder Include="FlaskWebProjectTest1\static\fonts\" />
     <Folder Include="FlaskWebProjectTest1\static\scripts\" />
     <Folder Include="FlaskWebProjectTest1\templates\" />
+    <Folder Include="FlaskWebProjectTest1\templates\auth\" />
+    <Folder Include="FlaskWebProjectTest1\templates\blog\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FlaskWebProjectTest1\schema.sql">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="FlaskWebProjectTest1\static\style.css" />
+    <Content Include="FlaskWebProjectTest1\templates\auth\login.html" />
+    <Content Include="FlaskWebProjectTest1\templates\auth\register.html" />
+    <Content Include="FlaskWebProjectTest1\templates\base.html" />
+    <Content Include="FlaskWebProjectTest1\templates\blog\create.html" />
+    <Content Include="FlaskWebProjectTest1\templates\blog\index.html" />
+    <Content Include="FlaskWebProjectTest1\templates\blog\update.html" />
     <Content Include="requirements.txt" />
     <Content Include="FlaskWebProjectTest1\static\content\bootstrap.css" />
     <Content Include="FlaskWebProjectTest1\static\content\bootstrap.min.css" />
